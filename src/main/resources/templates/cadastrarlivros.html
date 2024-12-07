@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Livros</title>
+</head>
+<body>
+
+<form th:action="@{/salvarlivros}" method="POST" th:object="${livro}">
+    <p> Nome <input type="text" th:field="${livro.nome}"></p>
+    <p> Autor <input type="text" th:field="${livro.autor}"></p>
+    <p> <input type="submit" value="Cadastrar"></p>
+</form>
+
+<a th:href="@{/home}">Voltar</a>
+
+</body>
+</html>
